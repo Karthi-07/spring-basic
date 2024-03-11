@@ -3,7 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
- <bean id="car" class="org.example.Car" scope="prototype">
+ <bean id="car" class="org.example.Car">
     <property name="speed" value="50"></property>
+     <property name="shift" ref="shift"></property>
  </bean>
+ <bean id="shift" class="org.example.Shift"></bean>
 </beans>
