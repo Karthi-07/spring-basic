@@ -3,13 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
- <bean id="car" class="org.example.Car">
+
+ <bean id="car" class="org.example.Car" autowire="byName">
     <property name="speed" value="50"></property>
-     <property name="shift" ref="shift"></property>
      <constructor-arg value="50"></constructor-arg>
-     <constructor-arg ref="shift"></constructor-arg>
+     <constructor-arg ref="com"></constructor-arg>
  </bean>
- <bean id="shift" class="org.example.Shift">
-     <constructor-arg value="44"></constructor-arg>
+
+ <bean id="com" class="org.example.Honda">
+ </bean>
+
+ <bean id="ff" class="org.example.Shift">
  </bean>
 </beans>
