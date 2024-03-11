@@ -4,7 +4,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
- <bean id="car" class="org.example.Car" autowire="byName">
+ <bean id="car" class="org.example.Car" autowire="constructor">
     <property name="speed" value="50"></property>
      <constructor-arg value="50"></constructor-arg>
      <constructor-arg ref="com"></constructor-arg>

@@ -9,8 +9,6 @@ import java.util.Formattable;
 @Component
 public class Honda implements FourWheeler {
     @Override
-    @Autowired
-    @Qualifier
     public void run(){
         System.out.println("The Honda car is moving");
     }
