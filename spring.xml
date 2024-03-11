@@ -6,6 +6,10 @@
  <bean id="car" class="org.example.Car">
     <property name="speed" value="50"></property>
      <property name="shift" ref="shift"></property>
+     <constructor-arg value="50"></constructor-arg>
+     <constructor-arg ref="shift"></constructor-arg>
  </bean>
- <bean id="shift" class="org.example.Shift"></bean>
+ <bean id="shift" class="org.example.Shift">
+     <constructor-arg value="44"></constructor-arg>
+ </bean>
 </beans>

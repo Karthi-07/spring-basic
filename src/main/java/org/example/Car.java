@@ -6,7 +6,10 @@ import org.springframework.stereotype.Component;
 public class Car {
     private int speed;
     private Shift shift;
-
+    public Car(int speed,Shift shift){
+        this.speed=speed;
+        this.shift=shift;
+    }
     public void run(){
         System.out.println("The car is moving");
         shift.run();

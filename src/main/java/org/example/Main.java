@@ -31,6 +31,7 @@ public class Main {
     <bean id="car" class="org.example.Car" scope="prototype"> </bean>
     default the scope is assigned to the singleton
  */
+
 //        Car c1 = (Car)context.getBean("car");
 //        c1.setSpeed(100);
 //        System.out.println("C1 speed :- "+c1.getSpeed());
@@ -41,7 +42,21 @@ public class Main {
   In property -> for primitive type we use "value"
               -> for reference type we use "ref"
 */
+
+ /* Constructor injection -> use <constructor-arg></constructor-arg> tag so, we pass the value with the help of value tag.
+    <constructor-arg value="10"></constructor-arg>
+    if we have more than one parameter in constructor
+    <constructor-arg value="10"></constructor-arg>
+    <constructor-arg ref="shift"></constructor-arg> // we can also pass the reference of an object.
+  */
+
+ /*
+  constructor injection -> it's for necessary and no optional [using constructor-arg tag]
+  setter injection -> It's may be optional [using property tag]
+ */
         Car car = (Car)context.getBean("car");
         car.run();
+
+
     }
 }
