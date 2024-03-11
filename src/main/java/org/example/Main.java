@@ -37,6 +37,10 @@ public class Main {
 //        Car c2 = (Car)context.getBean("car");
 //        System.out.println("C2 speed :- "+c2.getSpeed()); //it printes the default speed value
 
+/*
+  In property -> for primitive type we use "value"
+              -> for reference type we use "ref"
+*/
         Car car = (Car)context.getBean("car");
         car.run();
     }
