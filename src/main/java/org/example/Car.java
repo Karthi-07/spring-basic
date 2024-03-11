@@ -1,15 +1,20 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Car {
     private int speed;
-    private Shift shift;
-
+    private FourWheeler fourWheeler;
+    @Autowired
+    public Car(int speed,FourWheeler fourWheeler){
+        this.speed=speed;
+        this.fourWheeler=fourWheeler;
+    }
     public void run(){
-        System.out.println("The car is moving");
-        shift.run();
+        System.out.println("The  car is moving");
+        fourWheeler.run();
     }
 
     public int getSpeed() {
@@ -21,12 +26,12 @@ public class Car {
         this.speed = speed;
     }
 
-    public Shift getShift() {
-        return shift;
+    public FourWheeler getFourWheeler() {
+        return fourWheeler;
     }
 
-    public void setShift(Shift shift) {
-        this.shift = shift;
+    public void setShift(FourWheeler fourWheeler) {
+        this.fourWheeler = fourWheeler;
     }
 }
 
