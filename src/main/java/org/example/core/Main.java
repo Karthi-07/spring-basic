@@ -1,11 +1,8 @@
-package org.example;
+package org.example.core;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
-
-import java.nio.file.FileSystem;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +25,7 @@ public class Main {
  */
  /*
     CHANGE THE BEAN DESIGN PATTERN FROM SINGLETON TO PROTOTYPE
-    <bean id="car" class="org.example.Car" scope="prototype"> </bean>
+    <bean id="car" class="org.example.core.Car" scope="prototype"> </bean>
     default the scope is assigned to the singleton
  */
 

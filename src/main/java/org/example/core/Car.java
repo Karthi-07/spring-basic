@@ -1,13 +1,7 @@
-package org.example;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+package org.example.core;
 public class Car {
     private int speed;
     private FourWheeler fourWheeler;
-    @Autowired
     public Car(int speed,FourWheeler fourWheeler){
         this.speed=speed;
         this.fourWheeler=fourWheeler;

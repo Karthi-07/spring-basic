@@ -4,15 +4,15 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
- <bean id="car" class="org.example.Car" autowire="constructor">
+ <bean id="car" class="org.example.core.Car" autowire="constructor">
     <property name="speed" value="50"></property>
      <constructor-arg value="50"></constructor-arg>
      <constructor-arg ref="com"></constructor-arg>
  </bean>
 
- <bean id="com" class="org.example.Honda">
+ <bean id="com" class="org.example.core.Honda">
+ </bean>
+ <bean id="ff" class="org.example.core.Shift">
  </bean>
 
- <bean id="ff" class="org.example.Shift">
- </bean>
-</beans>
+ <bean id="aop" class="org.example.aop.AOP">
